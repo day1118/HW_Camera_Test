@@ -64,7 +64,7 @@ void loop() {
     PLOT_PRINT(sensorValue);
     digitalWrite(CAMERA_CLK_PIN, LOW);
 
-    if(sensorValue > 500)
+    if(sensorValue > 800)
     {
       if(conseq == 0)
       {
@@ -87,8 +87,9 @@ void loop() {
 
   int center = bestStart + (bestWidth/2);
     
-  PLOT("bestStart", bestStart);
-  PLOT("bestWidth", bestWidth);
+  PLOT("CAM_Start", bestStart);
+  PLOT("CAM_Width", bestWidth);
+
   delay(100);       
 }
 
